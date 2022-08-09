@@ -1,0 +1,22 @@
+import com.bootninza.droolsdemo.model.TopUpModel
+
+rule "Offer for paypal"
+      when
+        topUpObject : TopUpModel(paymentType=="paypal")
+        then
+        topUpObject.setDiscount(10);
+         end
+
+rule "Offer for Credit Card"
+      when
+        topUpObject : TopUpModel(paymentType=="tokenizedCard")
+        then
+        topUpObject.setDiscount(15);
+         end
+
+rule "Offer for Apple Pay"
+      when
+        topUpObject : TopUpModel(paymentType=="applePay")
+        then
+        topUpObject.setDiscount(5);
+         end

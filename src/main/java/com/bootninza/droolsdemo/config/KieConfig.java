@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class KieConfig {
-    private static final String drlFile = "TOPUP_FARE_RULE.drl";
+    private static final String drlFile = "topup_fare.xls";
 
     @Bean
     public KieContainer kieContainer() {

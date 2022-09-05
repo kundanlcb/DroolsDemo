@@ -1,6 +1,7 @@
 package com.bootninza.droolsdemo.controller;
 
 import com.bootninza.droolsdemo.model.TopUpModel;
+import com.bootninza.droolsdemo.service.DmnService;
 import com.bootninza.droolsdemo.service.TopUpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TopUpController {
 
     @Autowired
-    TopUpService topUpService;
+    DmnService topUpService;
 
     @PostMapping("recharge")
     public TopUpModel recharge(@RequestBody TopUpModel topUpModel){
